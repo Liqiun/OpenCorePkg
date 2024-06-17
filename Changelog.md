@@ -1,5 +1,12 @@
 OpenCore Changelog
 ==================
+#### v1.0.1
+- Updated code and added progress bar to macrecovery, thx @soyeonswife63
+- Bundled fat binary i386/x64 10.6+ compatible `nvramdump` with LogoutHook release
+- Added support for manual build of i386/x64 10.6+ versions of userspace tools via `FATBIN32=1 make`
+- Disabled `XcpmExtraMsrs MSR_MISC_PWR_MGMT` patch on macOS 12+ due to non-existence
+- Fixed `ThirdPartyDrives` quirk on macOS 14.4 and above
+
 #### v1.0.0
 - Updated builtin firmware versions for SMBIOS and the rest
 - Switched to Apple silicon GitHub runner for CI, thx @Goooler
@@ -13,6 +20,7 @@ OpenCore Changelog
 - Prevented debug assert reporting that optional Hii protocols are not present in OpenDuet
 - Fixed problem loading non-firmware runtime drivers (e.g. OpenRuntime.efi) in OpenDuet
 - Resolved issue using NOOPT debugging in OpenDuet
+- Fixed alphabetical ordering in Configuration.pdf, thx @leon9078
 
 #### v0.9.9
 - Fixed incorrect warning in ocvalidate
